@@ -7,3 +7,20 @@
 //
 
 import Foundation
+struct Elevator {
+    
+    // MARK: - Properties
+    var name: String?
+}
+
+struct Todo {
+
+    
+    
+    var userId: Int,
+     id: Int,
+     title: String,
+     completed: Bool
+    
+}
+
