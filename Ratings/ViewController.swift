@@ -17,10 +17,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 }
 }
-        
 //        var url = "https://rocket-api-fred.azurewebsites.net/api/elevators/status"
 //        let urlObj = URL(string: url)
 //
@@ -38,5 +36,4 @@ class ViewController: UIViewController {
 //    }.resume()
 //
 //}
-
 
