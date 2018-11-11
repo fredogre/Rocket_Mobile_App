@@ -38,7 +38,7 @@ class ElevatorsViewController: UITableViewController {
             }
             }.resume()
         
-        performSegue(withIdentifier: "showlist", sender: self)
+        
         
         
     }
