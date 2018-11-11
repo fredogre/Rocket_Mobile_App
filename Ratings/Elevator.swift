@@ -6,21 +6,21 @@
 //  Copyright © 2018 Frederique Grenier. All rights reserved.
 //
 
-import Foundation
-struct Elevator {
-    
-    // MARK: - Properties
-    var name: String?
-}
-
-struct Todo {
-
-    
-    
-    var userId: Int,
-     id: Int,
-     title: String,
-     completed: Bool
-    
-}
-
+//import Foundation
+//struct Elevator {
+//    
+//    // MARK: - Properties
+//    var name: String?
+//}
+//
+//struct Todo {
+//
+//    
+//    
+//    var userId: Int,
+//     id: Int,
+//     title: String,
+//     completed: Bool
+//    
+//}
+//

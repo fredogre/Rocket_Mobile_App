@@ -86,7 +86,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="2fd-4H-J9v" kind="presentation" id="vJt-KI-ejI"/>
+                                    <segue destination="2fd-4H-J9v" kind="presentation" identifier="showlist" id="vJt-KI-ejI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

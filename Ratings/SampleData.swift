@@ -6,26 +6,26 @@
 //  Copyright © 2018 Frederique Grenier. All rights reserved.
 //
 
-import Foundation
-import Alamofire
-import PromiseKit
-import SwiftyJSON
-
-final class SampleData {
-    
-    static func generateElevatorsData() -> [Elevator] {
-        return [
-            Elevator(name: "One World Trade Center"),
-            Elevator(name: "Google"),
-            Elevator(name: "Salesforce Tower")
-        ]
-    }
-    let queue_user_initiated = DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated)
-    
-//    func getSomeSampleData() -> Todo {
-//        let todoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
-//        let todo: Todo
+//import Foundation
+//import Alamofire
+//import PromiseKit
+//import SwiftyJSON
 //
+//final class SampleData {
+//
+//    static func generateElevatorsData() -> [Elevator] {
+//        return [
+//            Elevator(name: "One World Trade Center"),
+//            Elevator(name: "Google"),
+//            Elevator(name: "Salesforce Tower")
+//        ]
+//    }
+//    let queue_user_initiated = DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated)
+//
+////    func getSomeSampleData() -> Todo {
+////        let todoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
+////        let todo: Todo
+////
 //        Alamofire.request(todoEndpoint)
 //            .responseJSON { response in
 //                // check for errors
@@ -61,43 +61,43 @@ final class SampleData {
 //}
 
 
-func getSomeSampleData() -> Promise<Any>
-{
-    return Promise<Any> {
-        seal in
-        
-        self.queue_user_initiated.async
-            {
-                
-                var request = URLRequest(url: NSURL(string: "https://jsonplaceholder.typicode.com/todos/1")! as URL)
-                    request.httpMethod = HTTPMethod.get.rawValue
-//                    request.setValue("application/json", forHTTPHeaderField: "Accept")
-//                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                
-                let req = Alamofire.request(request)
-                req.responseJSON { response in
-                    
-                    
-                    switch(response.result) {
-                    case .failure(_):
-                        
-                        break
-                        
-                    case .success(_):
-                        break
-                    }
-                    
-                    
-                    guard let data = response.result.value else
-                    {
-                        
-                        return
-                    }
-                    
-                    let json = JSON(data)
-                        seal.fulfill(data)
-     }
-}
-}
-}
-}
+//func getSomeSampleData() -> Promise<Any>
+//{
+//    return Promise<Any> {
+//        seal in
+//        
+//        self.queue_user_initiated.async
+//            {
+//                
+//                var request = URLRequest(url: NSURL(string: "https://jsonplaceholder.typicode.com/todos/1")! as URL)
+//                    request.httpMethod = HTTPMethod.get.rawValue
+////                    request.setValue("application/json", forHTTPHeaderField: "Accept")
+////                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//                
+//                let req = Alamofire.request(request)
+//                req.responseJSON { response in
+//                    
+//                    
+//                    switch(response.result) {
+//                    case .failure(_):
+//                        
+//                        break
+//                        
+//                    case .success(_):
+//                        break
+//                    }
+//                    
+//                    
+//                    guard let data = response.result.value else
+//                    {
+//                        
+//                        return
+//                    }
+//                    
+//                    _ = JSON(data)
+//                        seal.fulfill(data)
+//     }
+//}
+//}
+//}
+//}
